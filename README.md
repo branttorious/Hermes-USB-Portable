@@ -59,7 +59,7 @@ Hermes Portable solves the host-dependency issue by establishing a sandboxed run
 ```mermaid
 graph TD
     A[User triggers launch script] --> B{Runtimes setup?}
-    B -- No / First Run --> C[Download Portable Python 3.11 & Node.js 22]
+    B -- No / First Run --> C[Download Portable Python 3.14 & Node.js 22]
     C --> D[Clone Hermes Agent Source to src/]
     D --> E[Create isolated virtual env using uv]
     E --> F[Install Python & Node packages locally]

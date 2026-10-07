@@ -30,7 +30,7 @@ Get-ChildItem -Path $Root -Filter "._*" -Recurse -Force -ErrorAction SilentlyCon
 # ---------------------------------------------------------------------------
 # Download URLs (pinned for reliability)
 # ---------------------------------------------------------------------------
-$PythonUrl  = "https://github.com/astral-sh/python-build-standalone/releases/download/20260602/cpython-3.11.15+20260602-x86_64-pc-windows-msvc-install_only.tar.gz"
+$PythonUrl  = "https://github.com/astral-sh/python-build-standalone/releases/download/20260602/cpython-3.14.5+20260602-x86_64-pc-windows-msvc-install_only.tar.gz"
 $NodeUrl    = "https://nodejs.org/dist/v22.22.3/node-v22.22.3-win-x64.zip"
 $UvUrl      = "https://github.com/astral-sh/uv/releases/download/0.11.19/uv-x86_64-pc-windows-msvc.zip"
 $RgUrl      = "https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-x86_64-pc-windows-msvc.zip"
@@ -230,7 +230,7 @@ if (Test-Path $readyFlag) {
 # ---------------------------------------------------------------------------
 # 1. Portable Python
 # ---------------------------------------------------------------------------
-Write-Step "Installing portable Python 3.11 ..."
+Write-Step "Installing portable Python 3.14 ..."
 $pyArchive = Join-Path $RuntimeDir "python.tar.gz"
 Download-File $PythonUrl $pyArchive
 Extract-TarGz $pyArchive (Join-Path $RuntimeDir "python")
